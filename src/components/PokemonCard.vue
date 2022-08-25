@@ -14,6 +14,10 @@ export default {
 </script>
 
 <style>
+h3 {
+ margin: 0;
+}
+
 .poke-id {
  position: absolute;
  top: 0;

@@ -6,7 +6,7 @@
       </div>
       <div class="data" v-if="pokemon">
         <h2>{{ pokemon.name }}</h2>
-        <p>{{ species.genera.find(g => g.language.name === "en").genus }}</p>
+        <p>{{ species?.genera?.find(g => g.language.name === "en")?.genus }}</p>
         <div class="property">
           <div class="left">Base Experience</div>
           <div class="right">{{ pokemon.base_experience }} XP</div>
@@ -24,7 +24,8 @@
           <div class="right">{{ species?.generation?.name?.replace("generation-", "")?.toUpperCase() }}</div>
         </div>
         <div class="property">
-          <div>{{ species?.flavor_text_entries?.find(t => t.language.name === "en")?.flavor_text }}</div>
+          <div>{{ species?.flavor_text_entries?.find(t => t.language.name === "en")?.flavor_text?.replace("", " ") }}
+          </div>
         </div>
         <h3>Pokemon Types</h3>
         <div class="types">
